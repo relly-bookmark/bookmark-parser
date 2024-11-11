@@ -8,6 +8,13 @@
 
 This library is a general-purpose bookmark file parser. It can parse bookmarks from various browsers and convert them to a common format.
 
+TODOs:
+
+- [x] Add netscape bookmark file parser
+- [ ] Add bookmark.bak file parser
+- [ ] Add netscape export option
+- [ ] Add bookmark.bak export option
+
 ## ✂️ Parsers
 
 ### Netscape Bookmark File
