@@ -62,6 +62,7 @@
     "eslint": "^9.9.1",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.10",
+    "node-ray": "^2.1.2",
     "pnpm": "^9.9.0",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.4",
