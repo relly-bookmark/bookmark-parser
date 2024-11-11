@@ -1,5 +1,5 @@
 // models
-import { BookmarkType, IBookmark, IBookmark, IParserOptions } from '../models/bookmark'
+import { BookmarkType, IBookmark, IParserOptions } from '../models/bookmark'
 
 // third party
 import { DateTime } from 'luxon'
