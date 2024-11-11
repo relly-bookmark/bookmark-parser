@@ -29,6 +29,40 @@ const parser = new NetscapeBookmarkParser()
 const tree = parser.parse(bookmarkFileContent)
 ```
 
+Exmple output:
+
+```json
+...
+{
+  "title": "Learning Platforms",
+  "added_at": "2023-01-11 20:53:20",
+  "modified_at": null,
+  "children": [
+    {
+      "title": "Coursera",
+      "url": "https://www.coursera.org/",
+      "added_at": "2023-01-11 20:53:21"
+    },
+    {
+      "title": "Udemy",
+      "url": "https://www.udemy.com/",
+      "added_at": "2023-01-11 20:53:22"
+    },
+    {
+      "title": "Pluralsight",
+      "url": "https://www.pluralsight.com/",
+      "added_at": "2023-01-11 20:53:23"
+    },
+    {
+      "title": "edX",
+      "url": "https://www.edx.org/",
+      "added_at": "2023-01-11 20:53:24"
+    }
+  ]
+}
+...
+```
+
 <!-- Badges -->
 
 [npm-version-src]: https://img.shields.io/npm/v/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
