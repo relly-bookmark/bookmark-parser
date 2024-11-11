@@ -1,2 +1,5 @@
-export const one = 1
-export const two = 2
+// models
+export { IBookmark, IBookmarkFolder, IParserOptions } from "./models/bookmark";
+
+// parsers
+export { default as NetscapeBookmarkParser } from "./parsers/netscape-bookmark-parser";

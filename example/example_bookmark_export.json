@@ -1,0 +1,192 @@
+[
+  {
+    "title": "Bookmarks",
+    "added_at": null,
+    "modified_at": null,
+    "children": [
+      {
+        "title": "Programming",
+        "added_at": "2023-01-11 20:46:40",
+        "modified_at": "2023-01-11 20:46:40",
+        "children": [
+          {
+            "title": "MDN Web Docs",
+            "url": "https://developer.mozilla.org/",
+            "added_at": "2023-01-11 20:46:41"
+          },
+          {
+            "title": "Stack Overflow",
+            "url": "https://stackoverflow.com/",
+            "added_at": "2023-01-11 20:46:42"
+          },
+          {
+            "title": "JavaScript Resources",
+            "added_at": "2023-01-11 20:48:20",
+            "modified_at": null,
+            "children": [
+              {
+                "title": "JavaScript Info",
+                "url": "https://javascript.info/",
+                "added_at": "2023-01-11 20:48:21"
+              },
+              {
+                "title": "Node.js Official Site",
+                "url": "https://nodejs.org/",
+                "added_at": "2023-01-11 20:48:22"
+              },
+              {
+                "title": "Frameworks",
+                "added_at": "2023-01-11 20:50:00",
+                "modified_at": null,
+                "children": [
+                  {
+                    "title": "React",
+                    "url": "https://reactjs.org/",
+                    "added_at": "2023-01-11 20:50:01"
+                  },
+                  {
+                    "title": "Vue.js",
+                    "url": "https://vuejs.org/",
+                    "added_at": "2023-01-11 20:50:02"
+                  },
+                  {
+                    "title": "Angular",
+                    "url": "https://angular.io/",
+                    "added_at": "2023-01-11 20:50:03"
+                  },
+                  {
+                    "title": "React Libraries",
+                    "added_at": "2023-01-11 20:51:40",
+                    "modified_at": null,
+                    "children": [
+                      {
+                        "title": "Redux",
+                        "url": "https://redux.js.org/",
+                        "added_at": "2023-01-11 20:51:41"
+                      },
+                      {
+                        "title": "Next.js",
+                        "url": "https://nextjs.org/",
+                        "added_at": "2023-01-11 20:51:42"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Learning Platforms",
+        "added_at": "2023-01-11 20:53:20",
+        "modified_at": null,
+        "children": [
+          {
+            "title": "Coursera",
+            "url": "https://www.coursera.org/",
+            "added_at": "2023-01-11 20:53:21"
+          },
+          {
+            "title": "Udemy",
+            "url": "https://www.udemy.com/",
+            "added_at": "2023-01-11 20:53:22"
+          },
+          {
+            "title": "Pluralsight",
+            "url": "https://www.pluralsight.com/",
+            "added_at": "2023-01-11 20:53:23"
+          },
+          {
+            "title": "edX",
+            "url": "https://www.edx.org/",
+            "added_at": "2023-01-11 20:53:24"
+          }
+        ]
+      },
+      {
+        "title": "Tech News",
+        "added_at": "2023-01-11 20:55:00",
+        "modified_at": null,
+        "children": [
+          {
+            "title": "TechCrunch",
+            "url": "https://techcrunch.com/",
+            "added_at": "2023-01-11 20:55:01"
+          },
+          {
+            "title": "The Next Web",
+            "url": "https://thenextweb.com/",
+            "added_at": "2023-01-11 20:55:02"
+          },
+          {
+            "title": "Hacker News",
+            "url": "https://news.ycombinator.com/",
+            "added_at": "2023-01-11 20:55:03"
+          }
+        ]
+      },
+      {
+        "title": "Tools",
+        "added_at": "2023-01-11 20:56:40",
+        "modified_at": null,
+        "children": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/",
+            "added_at": "2023-01-11 20:56:41"
+          },
+          {
+            "title": "GitLab",
+            "url": "https://gitlab.com/",
+            "added_at": "2023-01-11 20:56:42"
+          },
+          {
+            "title": "APIs and Documentation",
+            "added_at": "2023-01-11 20:57:30",
+            "modified_at": null,
+            "children": [
+              {
+                "title": "Swagger",
+                "url": "https://swagger.io/",
+                "added_at": "2023-01-11 20:57:31"
+              },
+              {
+                "title": "Postman",
+                "url": "https://postman.com/",
+                "added_at": "2023-01-11 20:57:32"
+              },
+              {
+                "title": "ApiDoc.js",
+                "url": "https://apidocjs.com/",
+                "added_at": "2023-01-11 20:57:33"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Personal Blogs",
+        "added_at": "2023-01-11 20:58:20",
+        "modified_at": null,
+        "children": [
+          {
+            "title": "Martin Fowler Blog",
+            "url": "https://martinfowler.com/",
+            "added_at": "2023-01-11 20:58:21"
+          },
+          {
+            "title": "David Walsh Blog",
+            "url": "https://davidwalsh.name/",
+            "added_at": "2023-01-11 20:58:22"
+          },
+          {
+            "title": "CSS-Tricks",
+            "url": "https://css-tricks.com/",
+            "added_at": "2023-01-11 20:58:23"
+          }
+        ]
+      }
+    ]
+  }
+]

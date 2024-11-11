@@ -6,22 +6,28 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+This library is a general-purpose bookmark file parser. It can parse bookmarks from various browsers and convert them to a common format.
 
-> **Note**:
-> Replace `pkg-placeholder`, `_description_` and `antfu` globally to use this template.
+## ✂️ Parsers
 
-## Sponsors
+### Netscape Bookmark File
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+The **[Netscape Bookmark File](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/)** parser can parse bookmarks from browsers that use the Netscape Bookmark File format. This includes Firefox, Chrome, and Safari.
 
-## License
+```ts
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import NetscapeBookmarkParser from 'path/to/netscape-bookmark-parser'
 
-[MIT](./LICENSE) License © 2024-PRESENT [Anthony Fu](https://github.com/antfu)
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const bookmarkFilePath = path.resolve(__dirname, './example_bookmark_export.html')
+const bookmarkFileContent = fs.readFileSync(bookmarkFilePath, 'utf-8')
+
+const parser = new NetscapeBookmarkParser()
+const tree = parser.parse(bookmarkFileContent)
+```
 
 <!-- Badges -->
 
