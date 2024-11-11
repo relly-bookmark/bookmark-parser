@@ -1,5 +1,5 @@
 // models
-import { IBookmark, IBookmarkFolder, IParserOptions } from '../models/bookmark'
+import { BookmarkType, IBookmark, IBookmark, IParserOptions } from '../models/bookmark'
 
 // third party
 import { DateTime } from 'luxon'
@@ -19,9 +19,9 @@ export default class NetscapeBookmarkParser {
    *
    * @param {string} html - The HTML string to parse.
    *
-   * @return {IBookmarkFolder[]} The parsed bookmark tree.
+   * @return {IBookmark[]} The parsed bookmark tree.
    */
-  public parse(html: string): (IBookmark | IBookmarkFolder)[]  {
+  public parse(html: string): IBookmark[]  {
     const cleanHtml = html.replace(/<!DOCTYPE [\s\S]+?<\/TITLE>|<DT>|<p>/g, '')
 
     const fragment = parseFragment(cleanHtml)
@@ -34,11 +34,11 @@ export default class NetscapeBookmarkParser {
    * `subTree` parameter is used to keep track of the current node's path.
    *
    * @param {any[]} nodes - A list of nodes parsed from the Netscape bookmark file.
-   * @param {IBookmarkFolder[]} [subTree=[]] - The current node's path.
+   * @param {IBookmark[]} [subTree=[]] - The current node's path.
    *
-   * @return {IBookmarkFolder[]} The parsed bookmark tree.
+   * @return {IBookmark[]} The parsed bookmark tree.
    */
-  private treeParser(nodes: any[], subTree: IBookmarkFolder[] = []): (IBookmark | IBookmarkFolder)[]  {
+  private treeParser(nodes: any[], subTree: IBookmark[] = []): IBookmark[]  {
     const _nodes: any[] = []
 
     nodes.forEach((_node) => {
@@ -47,6 +47,7 @@ export default class NetscapeBookmarkParser {
       // handle link nodes
       if (tag === 'a') {
         _nodes.push(<IBookmark>{
+          type: BookmarkType.LINK,
           title: _node.childNodes[0].value,
           url: _node.attrs?.find((item: any) => item.name === 'href')?.value,
           icon: _node.attrs?.find((item: any) => item.name === 'icon')?.value,
@@ -54,7 +55,8 @@ export default class NetscapeBookmarkParser {
         })
       } // handle parent folder nodes
       else if (tag === 'h3' || tag === 'h1') {
-        _nodes.push(<IBookmarkFolder>{
+        _nodes.push(<IBookmark>{
+          type: BookmarkType.FOLDER,
           title: _node.childNodes[0].value,
           added_at: this.parseDate(_node.attrs?.find((item: any) => item.name === 'add_date')?.value),
           modified_at: this.parseDate(_node.attrs?.find((item: any) => item.name === 'last_modified')?.value),

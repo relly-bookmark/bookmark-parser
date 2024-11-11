@@ -1,20 +1,17 @@
-import type { DateTime } from 'luxon'
-
-export interface IBookmarkFolder {
-  title: string | null
-  added_at: string
-  modified_at: string
-
-  children: (IBookmark | IBookmarkFolder)[] 
+export enum BookmarkType {
+  FOLDER = 'folder',
+  LINK = 'link',
 }
 
 export interface IBookmark {
+  type: BookmarkType
   title: string | null
-  url: string | null
-  icon: string | null
   added_at: string | null
+  modified_at?: string
+  url?: string | null
+  icon?: string | null
+  children?: IBookmark[] 
 }
-
 export interface IParserOptions {
     dateTimeFormat: string
 }
