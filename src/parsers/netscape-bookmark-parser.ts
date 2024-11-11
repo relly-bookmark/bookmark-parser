@@ -21,7 +21,7 @@ export default class NetscapeBookmarkParser {
    *
    * @return {IBookmarkFolder[]} The parsed bookmark tree.
    */
-  public parse(html: string): any {
+  public parse(html: string): (IBookmark | IBookmarkFolder)[]  {
     const cleanHtml = html.replace(/<!DOCTYPE [\s\S]+?<\/TITLE>|<DT>|<p>/g, '')
 
     const fragment = parseFragment(cleanHtml)
@@ -38,7 +38,7 @@ export default class NetscapeBookmarkParser {
    *
    * @return {IBookmarkFolder[]} The parsed bookmark tree.
    */
-  private treeParser(nodes: any[], subTree: IBookmarkFolder[] = []): IBookmarkFolder[] {
+  private treeParser(nodes: any[], subTree: IBookmarkFolder[] = []): (IBookmark | IBookmarkFolder)[]  {
     const _nodes: any[] = []
 
     nodes.forEach((_node) => {
