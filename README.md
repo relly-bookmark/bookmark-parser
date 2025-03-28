@@ -78,7 +78,7 @@ Exmple output:
 [npm-downloads-href]: https://npmjs.com/package/pkg-placeholder
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669&label=minzip
 [bundle-href]: https://bundlephobia.com/result?p=pkg-placeholder
-[license-src]: https://img.shields.io/github/license/antfu/pkg-placeholder.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/pkg-placeholder/blob/main/LICENSE
+[license-src]: https://img.shields.io/github/license/relly-bookmark/bookmark-parser.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/relly-bookmark/bookmark-parser/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
 [jsdocs-href]: https://www.jsdocs.io/package/pkg-placeholder
