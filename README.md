@@ -19,13 +19,13 @@ TODOs:
 
 ### Netscape Bookmark File
 
-The **[Netscape Bookmark File](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/)** parser can parse bookmarks from browsers that use the Netscape Bookmark File format. This includes Firefox, Chrome, and Safari.
+The **[Netscape Bookmark File](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/)** (*check this [message](https://stackoverflow.com/a/73727285/6940144)*) parser can parse bookmarks from browsers that use the Netscape Bookmark File format. This includes Firefox, Chrome, and Safari.
 
 ```ts
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import NetscapeBookmarkParser from 'path/to/netscape-bookmark-parser'
+import NetscapeBookmarkParser from '@path/to/netscape-bookmark-parser'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -39,7 +39,7 @@ const tree = parser.parse(bookmarkFileContent)
 Exmple output:
 
 ```json
-...
+// ...
 {
   "title": "Learning Platforms",
   "added_at": "2023-01-11 20:53:20",
@@ -67,7 +67,7 @@ Exmple output:
     }
   ]
 }
-...
+// ...
 ```
 
 <!-- Badges -->
