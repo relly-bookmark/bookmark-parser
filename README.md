@@ -17,7 +17,7 @@ TODOs:
 
 ## ✂️ Parsers
 
-### Netscape Bookmark File
+### 🚩 Netscape Bookmark File
 
 The **[Netscape Bookmark File](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/)** (*check this [message](https://stackoverflow.com/a/73727285/6940144)*) parser can parse bookmarks from browsers that use the Netscape Bookmark File format. This includes Firefox, Chrome, and Safari.
 
