@@ -1,9 +1,11 @@
 // models
-import { BookmarkType, IBookmark, IParserOptions } from '../models/bookmark'
+import type { IBookmark, IParserOptions } from '../models/bookmark'
 
 // third party
 import { DateTime } from 'luxon'
 import { parseFragment } from 'parse5'
+
+import { BookmarkType } from '../models/bookmark'
 
 export default class NetscapeBookmarkParser {
   private readonly options = <IParserOptions>{
@@ -21,7 +23,7 @@ export default class NetscapeBookmarkParser {
    *
    * @return {IBookmark[]} The parsed bookmark tree.
    */
-  public parse(html: string): IBookmark[]  {
+  public parse(html: string): IBookmark[] {
     const cleanHtml = html.replace(/<!DOCTYPE [\s\S]+?<\/TITLE>|<DT>|<p>/g, '')
 
     const fragment = parseFragment(cleanHtml)
@@ -34,11 +36,11 @@ export default class NetscapeBookmarkParser {
    * `subTree` parameter is used to keep track of the current node's path.
    *
    * @param {any[]} nodes - A list of nodes parsed from the Netscape bookmark file.
-   * @param {IBookmark[]} [subTree=[]] - The current node's path.
+   * @param {IBookmark[]} [subTree] - The current node's path.
    *
    * @return {IBookmark[]} The parsed bookmark tree.
    */
-  private treeParser(nodes: any[], subTree: IBookmark[] = []): IBookmark[]  {
+  private treeParser(nodes: any[], subTree: IBookmark[] = []): IBookmark[] {
     const _nodes: any[] = []
 
     nodes.forEach((_node) => {
@@ -64,9 +66,9 @@ export default class NetscapeBookmarkParser {
         })
       } // handle sub folder nodes
       else if (tag === 'dl') {
-        const lastNode = _nodes[_nodes.length - 1],
-          nodePath = subTree.concat(lastNode),
-          nextChildNodes = this.treeParser(_node.childNodes, nodePath)
+        const lastNode = _nodes[_nodes.length - 1]
+        const nodePath = subTree.concat(lastNode)
+        const nextChildNodes = this.treeParser(_node.childNodes, nodePath)
 
         lastNode.children = nextChildNodes
       }
@@ -84,9 +86,9 @@ export default class NetscapeBookmarkParser {
    * @returns {string|null} - the parsed and formatted timestamp, or null if the
    * input timestamp is empty or invalid
    */
-  private parseDate(timestamp: string): string|null {
+  private parseDate(timestamp: string): string | null {
     if (!timestamp) {
-      return null;
+      return null
     }
 
     const _timestamp = Number(timestamp)
@@ -94,4 +96,3 @@ export default class NetscapeBookmarkParser {
     return DateTime.fromSeconds(_timestamp).toFormat(this.options.dateTimeFormat)
   }
 }
-

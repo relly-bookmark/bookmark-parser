@@ -10,8 +10,9 @@ export interface IBookmark {
   modified_at?: string
   url?: string | null
   icon?: string | null
-  children?: IBookmark[] 
+  children?: IBookmark[]
 }
+
 export interface IParserOptions {
-    dateTimeFormat: string
+  dateTimeFormat: string
 }
